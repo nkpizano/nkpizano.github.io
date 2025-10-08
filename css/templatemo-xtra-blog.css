@@ -28,10 +28,8 @@ hr {
 .form-control::placeholder { color: #999; }
 
 .tm-header {
-    background-color:#f5f1eb;
-background-color: linear-gradient(90deg,rgba(245, 241, 235, 1) 0%, rgba(217, 207, 189, 1) 50%, rgba(194, 185, 167, 1) 100%);
+    background-color:linear-gradient(90deg,rgba(245, 241, 235, 1) 0%, rgba(217, 207, 189, 1) 50%, rgba(194, 185, 167, 1) 100%);
     color: white;
-    
     position: fixed;
     top: 0;
     left: 0;
