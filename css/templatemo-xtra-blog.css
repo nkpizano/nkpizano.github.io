@@ -28,7 +28,7 @@ hr {
 .form-control::placeholder { color: #999; }
 
 .tm-header {
-    background-color:#D9CFBD
+    background-color:#D9CFBD;
     color: white;
     position: fixed;
     top: 0;
