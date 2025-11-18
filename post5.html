@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xtra Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+<!--
+    
+TemplateMo 553 Xtra Blog
+
+https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">  
+				      <img src="img/about-01.jpg" alt="NKP" class="img-fluid">
+				 <h1 class="text-center">Netasha Pizano</h1>
+				 <h2 class="text-center">Statistics Support Peer</h2>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        Blog Home
+                    </a></li>
+                    <!--
+                    <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        About Me 
+                    </a></li>
+                    
+                    <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Contact Us
+                    </a></li>
+                    -->
+                </ul>
+            </nav>
+            <div class="tm-mb-65">
+              <!--
+                <a href="https://facebook.com" class="tm-social-link">
+                    <i class="fab fa-facebook tm-social-icon"></i>
+                </a>
+                -->
+                <a href="https://www.linkedin.com/in/netasha-k-pizano/" class="tm-social-link">
+                    <i class="fab fa-linkedin tm-social-icon"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <!-- Search form -->
+            <div class="row tm-row">
+                <div class="col-12">
+                    <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
+                        <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
+                        <button class="tm-search-button" type="submit">
+                            <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                        </button>                                
+                    </form>
+                </div>                
+            </div>            
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/post-04.png" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4">
+                            <h2 class="pt-2 tm-color-grey tm-post-title"> Tidy and Clean that Data</h2>
+                            <p class="tm-mb-40">Nov 7th, 2025 posted by N.K.Pizano</p>
+                             <p>
+                              <h3 class="pt-3 tm-color-primary"> Tidy </h3>  
+                             </p>
+                             Tidy data refers to a standardized way of organizing datasets so 
+                             they are easy to manipulate, analyze, and visualize. In tidy data, also referred to as structured data,
+                             where each variable forms its own column, each observation forms its own row, 
+                             and each value occupies a single cell. This structure allows R 
+                             tools—especially those in the tidyverse—to work seamlessly
+                             because functions are designed to operate on well-defined 
+                             rows and columns. In contrast, untidy data often breaks these 
+                             rules: variables may be spread across multiple columns, 
+                             values may be packed together in a single cell, column names 
+                             may contain data instead of labels, or observations may be split 
+                             across multiple tables or formats. These issues can make analysis 
+                             confusing, error-prone, or inefficient. While tidying is the first step to preprocessing 
+                             your data, the steps that follow are idosyncratic to the data. 
+                             Every data set is different and their cleaning needs vary. 
+                             <p>
+                              <h3 class="pt-3 tm-color-primary"> Common Steps </h3>  
+                             </p>
+                            <ul>
+                                <li> Importing Data: Properly importing data is the first step in tidying data in R. The packages and functions
+                                you use are dependent of the file extension. Here are the following useful packages and functions. </li>
+                                  <li> reader (import CSV/TSV files): read_csv(), read_tsv(), parse_number(), type_convert()</li>
+                                  <li> readxl (import Excel files): read_excel(), excel_sheets()</li>
+                                  <li> vroom (import Large files): vroom(), vroom_lines()</li>
+                                
+                                <li>  <a href = https://cghlewis.com/talks/rladies_nyc/> Crystal Lewis: A Comparison of Packages to Generate Codebooks in R</a> 
+                                 In this resource you can find the comparison of 4 different R packages designed to generate codebooks, making it useful as a quick-reference or decision aid for practitioners. </li>
+                                
+                                <li>  <a href =  <li>  <a href = https://rss.org.uk/RSS/media/News-and-publications/Publications/Reports%20and%20guides/A-Guide-for-Ethical-Data-Science-Final-Oct-2019.pdf> A Guide for
+                                Ethical Data Science</a> 
+                                The collaboration between the Royal Statistical Society and Institute and Faculty of Actuaries
+                                led to the development of a document that identified five broad themes and principles that were 
+                                described in other data ethic frameworks. This document provides practical application of ethical practices 
+                                related to societal value, avoiding harm, maintaining professional competence, trustworthiness,
+                                and accountability. </li>
+                            </ul>
+                          <p>
+                              <h3 class="pt-3 tm-color-primary"> How to Deal with Big Data in R</h3>  
+                             </p>
+                            <ul>
+                                <li>  <a href = https://rviews.rstudio.com/2019/07/17/3-big-data-strategies-for-r/>  Alex Gold:Three Strategies for Working with Big Data in R </a>  
+                                 A common misconception is that R can’t handle “big data” — the author points out that the core limitation is that R typically works in-memory (so your data must fit in RAM, and practically you’ll need ~2–3× the RAM size of your dataset) rather than a limitation of R. 
+                                 
+                                 </li>
+                                
+                                <li>  <a href = https://cghlewis.com/talks/rladies_nyc/> Crystal Lewis: A Comparison of Packages to Generate Codebooks in R</a> 
+                                 In this resource you can find the comparison of 4 different R packages designed to generate codebooks, making it useful as a quick-reference or decision aid for practitioners. </li>
+                                three main strategies (Sample and Model, Chunk and Pull, and Push Compute to Data) for handling large datasets in R, which are not mutually exclusive — you can combine them depending on your workflow.
+                                Check out this article!
+                                <li>  <a href =  <li>  <a href = https://posit.co/resources/videos/working-with-big-data-in-r/> Video: Working with Big Data in R </a> 
+                                Need an actual demonstration, check out this video by Garrett Grolemund. You can learn how to use dplyr syntax in R for querying large data stored in remote systems (e.g., cloud data-stores, database engines) rather than pulling all the data into memory.
+                                It addresses an important teaching point: when R transitions from prototyping/analysis to production-scale workflows, the strategies differ — especially for big data contexts (“how R can play a role in production with big data”).
+                                The webinar covers adjacent topics beyond pure querying: how to adapt visualizations, R Markdown reports, and Shiny applications so they work in big-data pipelines rather than assuming everything fits in memory. </li>
+                            </ul>
+                        </div>
+                        </div>
+                        
+                        <!-- Comments -->
+                            <form action="" class="mb-5 tm-comment-form">
+                                <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
+                                <div class="mb-4">
+                                    <input class="form-control" name="name" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <input class="form-control" name="email" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="form-control" name="message" rows="6"></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>                        
+                                </div>                                
+                            </form>                          
+                        </div>
+                    </div>
+                </div>
+            <!-- Sidebar -->
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
+                       <p>
+                         Coming soon
+                         </p>
+                        </a>
+                    </div>                    
+                </aside>
+            </div>
+            <footer class="row tm-row">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2020 Xtra Blog Company Co. Ltd.
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>
