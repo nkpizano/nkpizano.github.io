@@ -128,12 +128,31 @@ https://templatemo.com/tm-553-xtra-blog
                                 * We have not discussed writing code this way. Before the two-colon operator, we specify the package followed by the function. 
                                 Sometimes, two loaded packages will have the same function names. By specifying the package, we tell R which 
                                 package to use for the function we implement. 
-                                
+                
                                 <li> Recoding: A common reason for my peers to visit me during office hours surrounds recoding data. 
                                Recoding is the process of changing the values of a variable so the data becomes easier to 
                                 analyze, interpret, or model.This often includes renaming categories, collapsing multiple groups into 
                                 broader ones, converting text to numeric codes, or even creating new variables based on existing ones.
-                                Honestly, there are so many different functions that help recoding. Here are my favorite packages followed by functions for recording:  </li>
+                                Honestly, there are so many different functions that help recoding. Here are my favorite packages 
+                                followed by functions for recoding:  </li>
+                                <ol>
+                                    <li> dplyr: mutate(), case_when, recode()</li>
+                                    <li> forcats (helps with factor data): fct_recode(), fct_collapse(), fct_relevel(), fct_lump()</li>
+                                  </ol> 
+                              
+                              <li> Recoding: A common reason for my peers to visit me during office hours surrounds recoding data. 
+                               Recoding is the process of changing the values of a variable so the data becomes easier to 
+                                analyze, interpret, or model.This often includes renaming categories, collapsing multiple groups into 
+                                broader ones, converting text to numeric codes, or even creating new variables based on existing ones.
+                                Honestly, there are so many different functions that help recoding. Here are my favorite packages 
+                                followed by functions for recoding:  </li>
+                                <ol>
+                                    <li> dplyr - (In Tidyverse package): mutate(), case_when, recode()</li>
+                                    <li> forcats (In Tidyverse package;helps with factor data): fct_recode(), fct_collapse(), fct_relevel(), fct_lump()</li>
+                                    <li> car (helps with recoding into multiple conditions): recode()</li>
+                                    <li> lubridate (recode or transformaing datasets): ymd(), mdy(), dmy(), ymd_hms(), mdy_hm()</li>
+                                  </ol> 
+                                  
                             </ul>
                           <p>
                               <h3 class="pt-3 tm-color-primary"> How to Deal with Big Data in R</h3>  
@@ -141,7 +160,7 @@ https://templatemo.com/tm-553-xtra-blog
                             <ul>
                                 <li>  <a href = https://rviews.rstudio.com/2019/07/17/3-big-data-strategies-for-r/>  Alex Gold:Three Strategies for Working with Big Data in R </a>  
                                  A common misconception is that R can’t handle “big data” — the author points out that the core limitation is that R typically works in-memory (so your data must fit in RAM, and practically you’ll need ~2–3× the RAM size of your dataset) rather than a limitation of R. 
-                                 
+                                
                                  </li>
                                 
                                 <li>  <a href = https://cghlewis.com/talks/rladies_nyc/> Crystal Lewis: A Comparison of Packages to Generate Codebooks in R</a> 
