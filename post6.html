@@ -74,7 +74,7 @@ https://templatemo.com/tm-553-xtra-blog
             <div class="row tm-row">
                 <div class="col-12">
                     <hr class="tm-hr-primary tm-mb-55">
-                    <img src="img/post-04.png" alt="Image" class="img-fluid">
+                    <img src="img/post-06.png" alt="Image" class="img-fluid">
                 </div>
             </div>
             <div class="row tm-row">
@@ -88,7 +88,7 @@ https://templatemo.com/tm-553-xtra-blog
                              </p>
                           In this week's post, I review three essential R tools for creating effective data visualizations:
                           base R plotting, ggplot2, and Plotly. Each offers unique strengths—from quick exploratory charts in base R, 
-                          to highly customizable layered graphics in ggplot2, to dynamic, interactive plots with Plotly. Also, I provide 
+                          to highly customizable layered graphics in ggplot2 and interactive plots with Plotly. Also, I provide 
                           resources on designing inclusive and accessible visualizations, ensuring that data stories can be understood 
                           and engaged with by diverse audiences. Ultimately, the goal is not just to make attractive plots, 
                           but to use visualization as a powerful form of storytelling. Plots should help reveal patterns, 
@@ -109,36 +109,37 @@ https://templatemo.com/tm-553-xtra-blog
                                  with type = . Change the width of lines using lwd = and use col = to change the color of those points. 
                                  Check out the basic graph I created using the following line of code: 
                                  plot(cars$speed, cars$dist, type = "b", lwd =3, col = "red", main = "Plotting Distances and Speed Using the cars Data Set", xlab = " Car Speed", ylab = "Stopping Distance")
-                                 <img src="img/post-04.png" alt="Image" class="img-fluid"> </li>
+                                 <img src="img/distance and speed.png" alt="Image" class="img-fluid"> </li>
                                 
-                                <li>  <a href = https://cghlewis.com/talks/rladies_nyc/> Crystal Lewis: A Comparison of Packages to Generate Codebooks in R</a> 
-                                 In this resource you can find the comparison of 4 different R packages designed to generate codebooks, making it useful as a quick-reference or decision aid for practitioners. </li>
+                                <li>  <a href = https://ggplot2.tidyverse.org > ggplot</a> 
+                                There are many resources that you can help you build plots using GGplot2 from 
+                                cheatsheets to bookdowns, which can get you started or create highly customizable
+                                figures. I often refer to ggplot as my plot decorator because every argument or function
+                                you add onto ggplots give an added visual effect. I <3 GGplots, it genuinely 
+                                brings me joy! Here are the basic arguments to build your first plot. Start by calling 
+                                on the ggplot() function and listing the data frame in the parenthese. Within the same 
+                                function use the aes() argument, which will then help with "aesthetically" mapping on one or more 
+                                variables onto a plot. In other words, you are telling ggplot which two variables you would 
+                                like to plot. You can refer to those variables by using x = and y = or just listing 
+                                them and separating variables using a comma. Try this ggplot(cars, aes(x = speed, y = distance)). To add the actual points 
+                                Now that you have the base of your plot ready, you can add on those points by literally
+                                adding a plus symbol (+) to the end of the function followed by geom_point(). 
+                                <img src="img/ggplotbasicSaD.png" alt="Image" class="img-fluid"> You can customize 
+                                the shape, size, and color of those points. Beyond that you can creat histogram,
+                                qq-plots, and so much more. Check out this cheatsheet that I refer to all 
+                                the time <a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf"> Click Here</a>.</li>
                                 
-                                <li>  <a href =  <li>  <a href = https://rss.org.uk/RSS/media/News-and-publications/Publications/Reports%20and%20guides/A-Guide-for-Ethical-Data-Science-Final-Oct-2019.pdf> A Guide for
-                                Ethical Data Science</a> 
-                                The collaboration between the Royal Statistical Society and Institute and Faculty of Actuaries
-                                led to the development of a document that identified five broad themes and principles that were 
-                                described in other data ethic frameworks. This document provides practical application of ethical practices 
-                                related to societal value, avoiding harm, maintaining professional competence, trustworthiness,
-                                and accountability. </li>
-                            </ul>
-                          <p>
-                              <h3 class="pt-3 tm-color-primary"> How to Deal with Big Data in R</h3>  
-                             </p>
-                            <ul>
-                                <li>  <a href = https://rviews.rstudio.com/2019/07/17/3-big-data-strategies-for-r/>  Alex Gold:Three Strategies for Working with Big Data in R </a>  
-                                 A common misconception is that R can’t handle “big data” — the author points out that the core limitation is that R typically works in-memory (so your data must fit in RAM, and practically you’ll need ~2–3× the RAM size of your dataset) rather than a limitation of R. 
-                                 
-                                 </li>
-                                
-                                <li>  <a href = https://cghlewis.com/talks/rladies_nyc/> Crystal Lewis: A Comparison of Packages to Generate Codebooks in R</a> 
-                                 In this resource you can find the comparison of 4 different R packages designed to generate codebooks, making it useful as a quick-reference or decision aid for practitioners. </li>
-                                three main strategies (Sample and Model, Chunk and Pull, and Push Compute to Data) for handling large datasets in R, which are not mutually exclusive — you can combine them depending on your workflow.
-                                Check out this article!
-                                <li>  <a href =  <li>  <a href = https://posit.co/resources/videos/working-with-big-data-in-r/> Video: Working with Big Data in R </a> 
-                                Need an actual demonstration, check out this video by Garrett Grolemund. You can learn how to use dplyr syntax in R for querying large data stored in remote systems (e.g., cloud data-stores, database engines) rather than pulling all the data into memory.
-                                It addresses an important teaching point: when R transitions from prototyping/analysis to production-scale workflows, the strategies differ — especially for big data contexts (“how R can play a role in production with big data”).
-                                The webinar covers adjacent topics beyond pure querying: how to adapt visualizations, R Markdown reports, and Shiny applications so they work in big-data pipelines rather than assuming everything fits in memory. </li>
+                                <li>  <a href = <a href = https://plotly.com/r/> Plotly library</a> 
+                                Want to create an interactive plot for fun or a presentation? Plotly, like
+                                ggplot is highly customizable. I recently used it to display California home availability 
+                                by region. You can add range sliders, buttons,and so much more to financial plots, 
+                                maps, and statistics charts. To start creating an interactive plot being with the 
+                                function plot_ly(). Within the function list the data frame followed by, x = and y = to list
+                                the variables you want to work with. I use the following code plot_ly(cars, x = cars$speed, y = cars$dist)
+                                to generate my plot example. This plot does not leverage the informative
+                                plots you can create with this library. Make sure to check out more examples!
+                                <img src="img/plot_lySaD.png" alt="Image" class="img-fluid"></li>
+                           
                             </ul>
                         </div>
                         </div>
