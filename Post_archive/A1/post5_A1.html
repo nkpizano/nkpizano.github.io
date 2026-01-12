@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xtra Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+<!--
+    
+TemplateMo 553 Xtra Blog
+
+https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">  
+				      <img src="img/about-01.jpg" alt="NKP" class="img-fluid">
+				 <h1 class="text-center">Netasha Pizano</h1>
+				 <h2 class="text-center">Statistics Support Peer</h2>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        Blog Home
+                    </a></li>
+                    <!--
+                    <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        About Me 
+                    </a></li>
+                    
+                    <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Contact Us
+                    </a></li>
+                    -->
+                </ul>
+            </nav>
+            <div class="tm-mb-65">
+              <!--
+                <a href="https://facebook.com" class="tm-social-link">
+                    <i class="fab fa-facebook tm-social-icon"></i>
+                </a>
+                -->
+                <a href="https://www.linkedin.com/in/netasha-k-pizano/" class="tm-social-link">
+                    <i class="fab fa-linkedin tm-social-icon"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <!-- Search form -->
+            <div class="row tm-row">
+                <div class="col-12">
+                    <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
+                        <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
+                        <button class="tm-search-button" type="submit">
+                            <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                        </button>                                
+                    </form>
+                </div>                
+            </div>            
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/post-04.png" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4">
+                            <h2 class="pt-2 tm-color-grey tm-post-title"> Tidy and Clean that Data</h2>
+                            <p class="tm-mb-40">Nov 7th, 2025 posted by N.K.Pizano</p>
+                             <p>
+                              <h3 class="pt-3 tm-color-primary"> Tidy </h3>  
+                             </p>
+                             Tidy data refers to a standardized way of organizing datasets so 
+                             they are easy to manipulate, analyze, and visualize. In tidy data, also referred to as structured data,
+                             where each variable forms its own column, each observation forms its own row, 
+                             and each value occupies a single cell. This structure allows R 
+                             tools—especially those in the tidyverse—to work seamlessly
+                             because functions are designed to operate on well-defined 
+                             rows and columns. In contrast, untidy data often breaks these 
+                             rules: variables may be spread across multiple columns, 
+                             values may be packed together in a single cell, column names 
+                             may contain data instead of labels, or observations may be split 
+                             across multiple tables or formats. These issues can make analysis 
+                             confusing, error-prone, or inefficient. While tidying is the first step to preprocessing 
+                             your data, the steps that follow are idosyncratic to the data. 
+                             Every data set is different and their cleaning needs vary. 
+                             <p>
+                              <h3 class="pt-3 tm-color-primary"> Common Steps </h3>  
+                             </p>
+                            <ul>
+                                <li> Importing Data: Properly importing data is the first step in tidying data in R. The packages and functions
+                                you use are dependent on the file extension. Here are useful packages followed by functions: </li>
+                                  <ol>
+                                    <li> reader (import CSV/TSV files): read_csv(), read_tsv(), parse_number(), type_convert()</li>
+                                    <li> readxl (import Excel files): read_excel(), excel_sheets()</li>
+                                    <li> vroom (import Large files): vroom(), vroom_lines()</li>
+                                  </ol>  
+                                <li> Reshaping data: Sometimes tidying your data requires reorganizing it—also called reshaping—from 
+                                long to wide formats. Wide format helps ensure that every column is a variable and every row is an 
+                                observation. According to <a href =https://tidyr.tidyverse.org/reference/pivot_longer.html> tidyr documentation </a>, 
+                                long format assists with "lengthening" the original dataset. For example, if you wanted to "stack" 
+                                the same variable from different time points, you could create a column with those variable values 
+                                and an additional column with a corresponding label of the time point at which the data was collected. 
+                                In other words, you would reduce the number of columns by condensing them. Other common reorganizing steps 
+                                include, spliting one column into two or more or combining multiple into one. Changing the data structure 
+                                may be useful with applying specific analytical techniques or visualizations.Here are useful packages followed by functions:
+                                   </li>
+                                   <ol>
+                                    <li> tidyr: pivot_longer(), pivot_wider(), separate(), unite(), nest()</li>
+                                    <li> base R: reshape(), data.table::melt()*, </li>
+                                  </ol>  
+                                * We have not discussed writing code this way. Before the two-colon operator, we specify the package followed by the function. 
+                                Sometimes, two loaded packages will have the same function names. By specifying the package, we tell R which 
+                                package to use for the function we implement. 
+              
+                              <li> Recoding: A common reason for my peers to visit me during office hours surrounds recoding data. 
+                               Recoding is the process of changing the values of a variable so the data becomes easier to 
+                                analyze, interpret, or model.This often includes renaming categories, collapsing multiple groups into 
+                                broader ones, converting text to numeric codes, or even creating new variables based on existing ones.
+                                Honestly, there are so many different functions that help recoding. Here are my favorite packages 
+                                followed by functions for recoding:  </li>
+                                <ol>
+                                    <li> dplyr (In tidyverse package): mutate(), case_when, recode()</li>
+                                    <li> forcats (In tidyverse package;helps with factor data): fct_recode(), fct_collapse(), fct_relevel(), fct_lump()</li>
+                                    <li> car (helps with recoding into multiple conditions): recode()</li>
+                                    <li> lubridate (recode or transformaing datasets): ymd(), mdy(), dmy(), ymd_hms(), mdy_hm()</li>
+                                    <li> Hmisc (bin numerical values;assign variable labels):  cut2(),label()</li>
+                                  </ol> 
+                            <li> Missing Data and Basic Exploring: Evaluating missing data is a significant step in tidying data, from identifying
+                            missing values/labels to determining the missing data mechanism. Some data exploration functions can also provide
+                            some basic information about the presence of missing data.</li>
+                                <ol>
+                                    <li> skimr:  skim()</li>
+                                    <li> naniar: vis_miss(), replace_with_na(), miss_var_summary(), gg_miss_var(),</li>
+                                    <li> Hmisc (descriptive statistics):  describe()</li>
+                                    <li> Base R:  is.na(), na.omit(), complete.cases()</li>
+                                  </ol>   
+                            </ul>
+                        </div>
+                        </div>
+                        
+                        <!-- Comments -->
+                            <form action="" class="mb-5 tm-comment-form">
+                                <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
+                                <div class="mb-4">
+                                    <input class="form-control" name="name" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <input class="form-control" name="email" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="form-control" name="message" rows="6"></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>                        
+                                </div>                                
+                            </form>                          
+                        </div>
+                    </div>
+                </div>
+            <!-- Sidebar -->
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
+                       <p>
+                         Coming soon
+                         </p>
+                        </a>
+                    </div>                    
+                </aside>
+            </div>
+            <footer class="row tm-row">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2020 Xtra Blog Company Co. Ltd.
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>

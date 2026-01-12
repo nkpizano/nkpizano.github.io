@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xtra Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+<!--
+    
+TemplateMo 553 Xtra Blog
+
+https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">  
+				      <img src="img/about-01.jpg" alt="NKP" class="img-fluid">
+				 <h1 class="text-center">Netasha Pizano</h1>
+				 <h2 class="text-center">Statistics Support Peer</h2>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        Blog Home
+                    </a></li>
+                    <!--
+                    <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        About Me 
+                    </a></li>
+                    
+                    <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Contact Us
+                    </a></li>
+                    -->
+                </ul>
+            </nav>
+            <div class="tm-mb-65">
+              <!--
+                <a href="https://facebook.com" class="tm-social-link">
+                    <i class="fab fa-facebook tm-social-icon"></i>
+                </a>
+                -->
+                <a href="https://www.linkedin.com/in/netasha-k-pizano/" class="tm-social-link">
+                    <i class="fab fa-linkedin tm-social-icon"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <!-- Search form -->
+            <div class="row tm-row">
+                <div class="col-12">
+                    <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
+                        <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
+                        <button class="tm-search-button" type="submit">
+                            <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                        </button>                                
+                    </form>
+                </div>                
+            </div>            
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                      <img src="img/post-01.jpg" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4">
+                            <h2 class="pt-2 tm-color-grey tm-post-title"> All About the Basics: R and Rstudio</h2>
+                            <p class="tm-mb-40">Oct 8th, 2025 posted by N.K.Pizano</p>
+                             <p>
+                              <h3 class="pt-3 tm-color-primary"> Installing R and Rstudio Windows</h3>  
+                             </p>
+                            <ul>
+                                <li> Download R from the <a href = https://cran.r-project.org/bin/windows/base/release.htm>CRAN website</a> </li>
+                                <li> Run the .exe file that was just downloaded</li>
+                                <li> Go to the <a href =  https://posit.co/download/rstudio-desktop/#download>Rstudio download page</a> located on posit </li>
+                                <li> Under Installers select Windows Vista 10/11 - RSTUDIO-xxxx.yy.z-zzz.exe (where x = year, y = month, and z represent version numbers) </li>
+                                <li> Double click the file to install it </li>
+                                <li> Once it’s installed, open RStudio to make sure it works and you don’t get any error messages </li>
+                            </ul>
+                        <p>
+                              <h3 class="pt-3 tm-color-primary"> Installing R and Rstudio MacOS</h3>  
+                             </p>
+                            <ul>
+                              <li> Download R from the <a href = https://cran.r-project.org/bin/macosx/>CRAN website</a> </li>
+                              <li> Select the .pkg file for the latest R version</li>
+                              <li> Double click on the downloaded file to install R</li>
+                              <li> Install <a href = https://www.xquartz.org>XQuartz website</a> </li>
+                              <li> Go to the <a href =  https://posit.co/download/rstudio-desktop/#download>Rstudio download page</a> located on posit </li>
+                              <li> Under Installers select Mac OS 13+ - RSTUDIO-xxxx.yy.z-zzz.dmg (where x = year, y = month, and z represent version numbers)</li>
+                              <li> Double click the file to install it </li>
+                              <li> Once it’s installed, open RStudio to make sure it works and you don’t get any error messages </li>
+                            </ul>
+                        <p>
+                            <h3 class="pt-3 tm-color-primary"> What are Rmarkdowns </h3>  
+                        </p>
+                          RMarkdown (.Rmd) files combine text, code, and output (like plots or tables) in one document.
+                          They’re perfect for:
+                         <p> 
+	                         <ul>
+	                         <li>Reproducible reports </li>
+	                        <li>Class notes </li>
+	                        <li>Interactive documents </li>
+	                        </ul>
+	                       You can knit an RMarkdown file into HTML, PDF, or Word 
+	                       to produce polished documents that mix narrative and analysis seamlessly.
+	                       Need help starting a Rmarkdown? Check out the following resources:
+	                       <ul>
+	                       <li><a href =https://posit.co/wp-content/uploads/2022/10/rmarkdown-1.pdf>Rmarkdown cheatsheet</a></li>
+	                       <li><a href =https://r4ds.had.co.nz/r-markdown.html> r4ds</a></li>
+	                       </ul>
+                        </p>
+                    <p>
+                              <h3 class="pt-3 tm-color-primary"> What are packages</h3>  
+                             </p>
+                            Packages are like convenient bundles for code, datasets, and documents - think of them like apps downloaded to your phone. They make your work easier and more efficient. 
+ I highly recommend installing packages using the "install.packages("")" function in the console of R-studio, also known as the third panel/quadrant.
+To use those packages, create an R code chunk at the top of your script for the packages you need. This organization is a key step in ensuring your work is easily reproducible.
+To read in a package and use the code, you need to use the "library()" function. 
+Here are some of my favorite packages: 
+                            <ul>
+                                <li> Cleaning data: <a href = https://www.tidyverse.org>Tidyverse </a> is a package of packages (ggplot2, dplyr,tibble, tidyr)! </li>
+                                <li> Plotting data: Besides ggplot2, <a href = https://plotly.com/r/>  Plotly </a> You may find that generating interactive plots is useful to your data storytelling, but also fun!</li>
+                                <li> Creating tables: <a href = https://gt.rstudio.com>  GT </a> </li>
+                                <li> Incorporte other languages like Python and SQL in R: <a href =  https://rstudio.github.io/reticulate/> Reticulate</a> for python and <a href =  https://duckdb.org/docs/stable/clients/r.html> DuckDB</a> for SQL</li>
+                                <li> Machine Learning: <a href =  https://rstudio.github.io/reticulate/> tidymodels </a> </li>
+                            </ul>
+                        <p>
+                              <h3 class="pt-3 tm-color-primary"> Useful Keyboard Shortcuts</h3>  
+                             </p>
+                             The following are keyboard shortcuts that I use daily:
+                             <ul>
+                                <li> Start a new R code chunk using Mac/Windows: control + option + i/ control + alt + i </li>
+                                <li> Insert the assignment operator (<-) Mac/Windows: option + -/ alt + - </li>
+                                <li> Insert a pipe (%>%) Mac/Windows: Ctrl+Shift+M</li>
+                            </ul>
+                        </div>
+                        </div>
+                        
+                        <!-- Comments -->
+                            <form action="" class="mb-5 tm-comment-form">
+                                <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
+                                <div class="mb-4">
+                                    <input class="form-control" name="name" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <input class="form-control" name="email" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="form-control" name="message" rows="6"></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>                        
+                                </div>                                
+                            </form>                          
+                        </div>
+                    </div>
+                </div>
+            <!-- Sidebar -->
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
+                       <p>
+                         Coming soon
+                         </p>
+                        </a>
+                    </div>                    
+                </aside>
+            </div>
+            <footer class="row tm-row">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2020 Xtra Blog Company Co. Ltd.
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>

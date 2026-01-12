@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xtra Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+<!--
+    
+TemplateMo 553 Xtra Blog
+
+https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">  
+				      <img src="img/about-01.jpg" alt="NKP" class="img-fluid">
+				 <h1 class="text-center">Netasha Pizano</h1>
+				 <h2 class="text-center">Statistics Support Peer</h2>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        Blog Home
+                    </a></li>
+                    <!--
+                    <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        About Me 
+                    </a></li>
+                    
+                    <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Contact Us
+                    </a></li>
+                    -->
+                </ul>
+            </nav>
+            <div class="tm-mb-65">
+              <!--
+                <a href="https://facebook.com" class="tm-social-link">
+                    <i class="fab fa-facebook tm-social-icon"></i>
+                </a>
+                -->
+                <a href="https://www.linkedin.com/in/netasha-k-pizano/" class="tm-social-link">
+                    <i class="fab fa-linkedin tm-social-icon"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <!-- Search form -->
+            <div class="row tm-row">
+                <div class="col-12">
+                    <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
+                        <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
+                        <button class="tm-search-button" type="submit">
+                            <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                        </button>                                
+                    </form>
+                </div>                
+            </div>            
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/post-06.jpg" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4">
+                            <h2 class="pt-2 tm-color-grey tm-post-title"> Visualizations and Storytelling </h2>
+                            <p class="tm-mb-40">Nov 14., 2025 posted by N.K.Pizano</p>
+                             <p>
+                              <h3 class="pt-3 tm-color-primary"> Plots and Figures in R </h3>  
+                             </p>
+                          In this week's post, I review three essential R tools for creating effective data visualizations:
+                          base R plotting, ggplot2, and Plotly. Each offers unique strengths—from quick exploratory charts in base R, 
+                          to highly customizable layered graphics in ggplot2 and interactive plots with Plotly. Also, I provide 
+                          resources on designing inclusive and accessible visualizations, ensuring that data stories can be understood 
+                          and engaged with by diverse audiences. Ultimately, the goal is not just to make attractive plots, 
+                          but to use visualization as a powerful form of storytelling. Plots should help reveal patterns, 
+                          clarify insights, and communicate findings with clarity and care. Remember, data are derived from 
+                          someone or something, including humans, animals, and other worldly phenomena. 
+                            <p>
+                              <h3 class="pt-3 tm-color-primary"> R code for plotting </h3>  
+                             </p>
+                            <ul>
+                                <li>  <a href = https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/plot>  Plot in Base R </a>  
+                                 By default, plot() using base R (no need to load package) will produce a scatter plot. 
+                                 This function, is great if you need to quickly visually explore
+                                 the relation between variables or to create a "historgram-like" plot for a single variable.
+                                 Start the argument by stating the variable or variables you like to plot plot(x,y).
+                                 Building on or customizing the scatter plot is really easy. You can add arguments like type =, lwd =, col =. Where 
+                                 type = will let you costumize appearance of data points. For example, plot(x,y, type = "l") will display 
+                                 the relation between both variables using a continuous line. Check the link above for other arguements to specify 
+                                 with type = . Change the width of lines using lwd = and use col = to change the color of those points. 
+                                 Check out the basic graph I created using the following line of code: 
+                                 plot(cars$speed, cars$dist, type = "b", lwd =3, col = "red", main = "Plotting Distances and Speed Using the cars Data Set", xlab = " Car Speed", ylab = "Stopping Distance")
+                                 <img src="img/Distance and Speed.png" alt="Image" class="img-fluid"> </li>
+                                
+                                <li>  <a href = https://ggplot2.tidyverse.org > ggplot</a> 
+                                There are many resources that you can help you build plots using GGplot2 from 
+                                cheatsheets to bookdowns, which can get you started or create highly customizable
+                                figures. I often refer to ggplot as my plot decorator because every argument or function
+                                you add onto ggplots give an added visual effect. I <3 GGplots, it genuinely 
+                                brings me joy! Here are the basic arguments to build your first plot. Start by calling 
+                                on the ggplot() function and listing the data frame in the parenthese. Within the same 
+                                function use the aes() argument, which will then help with "aesthetically" mapping on one or more 
+                                variables onto a plot. In other words, you are telling ggplot which two variables you would 
+                                like to plot. You can refer to those variables by using x = and y = or just listing 
+                                them and separating variables using a comma. Try this ggplot(cars, aes(x = speed, y = distance)). To add the actual points 
+                                Now that you have the base of your plot ready, you can add on those points by literally
+                                adding a plus symbol (+) to the end of the function followed by geom_point(). 
+                                <img src="img/ggplotbasicSaD.png" alt="Image" class="img-fluid"> You can customize 
+                                the shape, size, and color of those points. Beyond that you can creat histogram,
+                                qq-plots, and so much more. Check out this cheatsheet that I refer to all 
+                                the time <a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf"> Click Here</a>.</li>
+                                
+                                <li>  <a href = <a href = https://plotly.com/r/> Plotly library</a> 
+                                Want to create an interactive plot for fun or a presentation? Plotly, like
+                                ggplot is highly customizable. I recently used it to display California home availability 
+                                by region. You can add range sliders, buttons,and so much more to financial plots, 
+                                maps, and statistics charts. To start creating an interactive plot being with the 
+                                function plot_ly(). Within the function list the data frame followed by, x = and y = to list
+                                the variables you want to work with. I use the following code plot_ly(cars, x = cars$speed, y = cars$dist)
+                                to generate my plot example. This plot does not leverage the informative
+                                plots you can create with this library. Make sure to check out more examples!
+                                <img src="img/plot_lySaD.png" alt="Image" class="img-fluid"></li>
+                           
+                            </ul>
+                        </div>
+                        </div>
+                        
+                        <!-- Comments -->
+                            <form action="" class="mb-5 tm-comment-form">
+                                <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
+                                <div class="mb-4">
+                                    <input class="form-control" name="name" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <input class="form-control" name="email" type="text">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="form-control" name="message" rows="6"></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>                        
+                                </div>                                
+                            </form>                          
+                        </div>
+                    </div>
+                </div>
+            <!-- Sidebar -->
+                        <hr class="mb-3 tm-hr-primary">
+                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
+                       <p>
+                         Coming soon
+                         </p>
+                        </a>
+                    </div>                    
+                </aside>
+            </div>
+            <footer class="row tm-row">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2020 Xtra Blog Company Co. Ltd.
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>
